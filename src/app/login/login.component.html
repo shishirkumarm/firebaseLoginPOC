@@ -1,0 +1,34 @@
+<div class="login-box">
+  <div class="box-p-lr">
+    <div class="header text-center m-btm">
+      <div class="title-text"><b>{{static_string.us.sign_up}}</b></div>
+      <div class="f-16 sub-title-color">{{static_string.us.signup_to_create_isha_profile}}</div>
+    </div>
+    <div class="main text-center m-top-xl">
+      <div class="">
+        <button type="button" class="btn btn-primary" (click)="loginWithFacebook()">
+            <div class="fb-svg icon-align"></div>
+            <div class="f-18 inline text-left">{{static_string.us.continue_with_fb}}
+              <div class="f-13">{{static_string.us.we_wont_post_without_asking}}</div>
+            </div>
+        </button>
+      </div>
+      <div class="m-top">
+        <button type="button" class="btn btn-default" (click)="loginWithGoogle()">
+              <div class="google-svg icon-align"></div>
+              <div class="inline f-18" style="vertical-align: top; margin-top: 10px;">{{static_string.us.continue_with_google}}</div>
+        </button>
+      </div>
+      <div class="isha-color f-16">
+        <b (click)=signUpWithEmail()>{{static_string.us.or_sign_in_using_email}}</b>
+      </div>
+    </div>
+    <div class="footer m-btm m-top">
+      <p class="p-top">
+        {{static_string.us.by_signing_up_you_agree_to_isha}}
+        <span class="isha-text cursor-pointer">{{static_string.us.terms_conditions}}</span> {{static_string.us.and}}&nbsp;<span class="isha-text cursor-pointer">{{static_string.us.privacy_policy}}</span>
+        <span>{{static_string.us.condition_msg}}</span>{{static_string.us.we_wont_post_without_asking}}
+      </p>
+    </div>
+  </div>
+</div>

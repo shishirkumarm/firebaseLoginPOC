@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3>Doctors List</h3>
+    <table class="tabcontenttable">
+      <tr class="row tableheading">
+        <td class="textcolor">Doctor's first name</td>
+        <td class="textcolor">Doctor's last name</td>
+        <td class="textcolor">Email Id</td>
+        <td class="textcolor">Country</td>
+       </tr>
+       <tr class="row table-row" *ngFor="let doctorItem of authService.doctorCollection | async">
+         <td class="table-td">{{doctorItem.first_name}} </td>
+         <td class="table-td">{{doctorItem.last_name}}</td>
+         <td class="table-td">{{doctorItem.emailid}}</td>
+         <td class="table-td">{{doctorItem.country}}</td>   
+       </tr>       
+    </table>
+    <h3>Patients List</h3>
+    <table class="tabcontenttable">
+      <tr class="row tableheading">
+        <td class="textcolor">Patient's first name</td>
+        <td class="textcolor">Patient's last name</td>
+        <td class="textcolor">Email Id</td>
+        <td class="textcolor">Country</td>
+       </tr>
+       <tr class="row table-row" *ngFor="let patientItem of authService.patientCollection | async">
+        <td class="table-td">{{patientItem.first_name}} </td>
+        <td class="table-td">{{patientItem.last_name}}</td>
+        <td class="table-td">{{patientItem.emailid}}</td>
+        <td class="table-td">{{patientItem.country}}</td>       
+       </tr>       
+    </table>
+    <button class="btn btn-default" (click)="logout()">Logout</button>
+  </div>
+</div>
